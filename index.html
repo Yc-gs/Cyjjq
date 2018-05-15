@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/yc.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/topNav.js"></script>
+    <title>产品聚集区官网</title> 
+</head>
+<body>
+    <div class="wrap" style="-webkit-transform: translate(0,0);-moz-transform: translate(0,0);-ms-transform: translate(0,0);-o-transform: translate(0,0);transform: translate(0,0);">
+        <!--顶部导航条开始-->
+        <div class="box">
+            <div class="t_news">
+                <b>最新播报：</b>
+                <ul class="news_li">
+                    <li><a href="#" >水果忍者：穿靴子的猫</a><span>[2018-05-10]</span></li>
+                    <li><a href="#" >乐动魔方 Plus</a><span>[2018-05-10]</span></li>
+                    <li><a href="#" >亡灵杀手 汉化版</a><span>[2018-05-10]</span></li>
+                    <li><a href="#" >jq22 搜集整理</a><span>[2018-05-10]</span></li>
+                    <li><a href="#" >你疯啦 iphone壁纸</a><span>[2018-05-10]</span></li>
+                </ul>
+                <ul class="swap"></ul>
+            </div>
+        </div>
+        <!--轮播图、公告信息-->
+        <div class="slider1 clearfix">
+            <!--轮播图位置-->
+            <div class="left">
+                <!--轮播图插件-->
+                <div class="content">
+                    <div class="a-content">
+                        <div class="carousel-content">
+                            <ul class="carousel">
+                                <li><div><img src="images/pic1.png"></div>
+                                    <div class="bana_title"><h3>滑县城市建设</h3></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/pic2.png"></div>
+                                    <div class="bana_title"><h3>滑县城市建设2</h3></div>
+                                </li>
+                                <li>
+                                     <div><img src="images/pic3.png"></div>
+                                    <div class="bana_title"><h3>滑县城市建设3</h3></div>           
+                                </li>
+                                <li>
+                                    <div><img src="images/pic4.png"></div>
+                                    <div class="bana_title"><h3>滑县城市建设4</h3></div>            
+                                </li>
+                            
+                            </ul>
+                            <ul class="img-index"></ul>
+                            <div class="carousel-prev"><img src="images/left1.png"></div>
+                            <div class="carousel-next"><img src="images/right1.png"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--引用插件-->
+                <script type="text/javascript" src="js/carousel.js"></script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".carousel-content").carousel({
+                            carousel : ".carousel",//轮播图容器
+                            indexContainer : ".img-index",//下标容器
+                            prev : ".carousel-prev",//左按钮
+                            next : ".carousel-next",//右按钮
+                            timing : 3000,//自动播放间隔
+                            animateTime : 700,//动画时间
+                            autoPlay : true,//是否自动播放 true/false
+                            direction : "left",//滚动方向 right/left
+                        });
+
+                        $(".carousel-content").hover(function(){
+                            $(".carousel-prev,.carousel-next").fadeIn(300);
+                        },function(){
+                            $(".carousel-prev,.carousel-next").fadeOut(300);
+                        });
+
+                        $(".carousel-prev").hover(function(){
+                            $(this).find("img").attr("src","./images/left2.png");
+                        },function(){
+                            $(this).find("img").attr("src","./images/left1.png");
+                        });
+                        $(".carousel-next").hover(function(){
+                            $(this).find("img").attr("src","./images/right2.png");
+                        },function(){
+                            $(this).find("img").attr("src","./images/right1.png");
+                        });
+                    });
+                </script>
+            </div>
+            <!--公告栏位置-->
+            <div class="right">
+                <div class="notice">
+                    <!--自制tab自动切换效果-->
+                    <script>
+                       $(function () {
+                           var timer = null,flag = 1;
+                           $("#first-ul li").on("click", function () {
+                               clearInterval(timer);
+                               $(this).children("i").fadeIn();
+                               $(this).children("ul").fadeIn();
+                               $(this).siblings().children("i").hide();
+                               $(this).siblings().children("ul").hide();
+                               flag = $(this).index();
+                               $("#first-ul").on("mouseleave", function () {
+                                   clearInterval(timer);
+                                   timer = setInterval(function () {
+                                       if(flag<$("#first-ul>li").length-1){
+                                           flag++;
+                                       }else {
+                                           flag = 0;
+                                       };
+                                       $("#first-ul>li").children("i").fadeOut(1000);
+                                       $("#first-ul>li").children("ul").fadeOut(1000);
+                                       $("#first-ul>li").eq(flag).children("i").fadeIn(2000);
+                                       $("#first-ul>li").eq(flag).children("ul").fadeIn(2000);
+
+                                   },4000);
+                               });
+                           });
+                          /* $("#first-ul").on("mouseenter", function () {
+                               clearInterval(timer);
+                           })*/
+                           clearInterval(timer);
+                           timer = setInterval(function () {
+                               $("#first-ul>li").children("i").fadeOut(1000);
+                               $("#first-ul>li").children("ul").fadeOut(1000);
+                               $("#first-ul>li").eq(flag).children("i").fadeIn(2000);
+                               $("#first-ul>li").eq(flag).children("ul").fadeIn(2000);
+                               console.log($("#first-ul>li").length);
+                               if(flag<$("#first-ul>li").length-1){
+                                   flag++;
+                               }else {
+                                   flag = 0;
+                               }
+                           },4000);
+                       });
+                    </script>
+                    <ul id="first-ul">
+                        <li>新闻动态
+                            <ul>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                                <li><a href="##">李克强李克强李克强李克强李克强近平总书记</a><span>[2018-05-01]</span></li>
+                            </ul>
+                            <i></i>
+                        </li>
+                        <li>通知公告
+                            <ul>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                                <li><a href="##">习近平总书记习近平总书记近平总书记</a><span>[2018-05-10]</span></li>
+                            </ul>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--四个选项卡-->
+        <div class="choose-for clearfix">
+            <ul>
+                <li style="margin-left: 0;"><a href=##"><img src="images/1政府文件.png" alt=""></a></li>
+                <li><a href=##"><img src="images/2招商引资.png" alt=""></a></li>
+                <li><a href=##"><img src="images/3扶贫攻坚.png" alt=""></a></li>
+                <li><a href=##"><img src="images/4大事记.png" alt=""></a></li>
+            </ul>
+        </div>
+        <!--重点企业展示-->
+        <div class="show-inportant clearfix">
+            <div class="top">
+                <h3>重点企业展示</h3>
+            </div>
+            <div class="line"></div>
+            <div class="big-slide">
+                <div class="left-right">
+                    <span class="btn-left"><</span>
+                    <span class="btn-right">></span>
+                </div>
+                <div class="slide-inner">
+                    <ul class="clearfix slider2">
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(3).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(4).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(5).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(6).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+
+
+
+
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(1).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(2).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(3).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(4).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(5).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(6).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+
+
+
+
+
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(1).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(2).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(3).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                        <li>
+                            <div class="dt"><a href="##"><img src="images/im%20(4).png" alt=""></a></div>
+                            <!--<div class="dd">
+                                <p>重点企业</p>
+                                <p>绿色产品，坚韧耐用</p>
+                            </div>-->
+                        </li>
+                    </ul>
+                    <!--首页轮播图自定义script-->
+                    <script>
+                        $(function () {
+                            var index = 4,timer3 = null;
+                            clearInterval(timer3);
+                            var timer3 = setInterval(function () {
+                                /*clearInterval(timer3);*/
+                                index++;
+                                if(index > $(".slider2 li").length-4){
+                                    $('.slider2').css('left','-1020px');
+                                    index = 5;
+                                };
+                                $('.slider2').animate({
+                                    left:-index*255
+                                },500);
+                            },2000);
+                            $(".btn-left").on("click", function () {
+                                clearInterval(timer3);
+                                index--;
+                                if(index<0){
+                                    $('.slider2').css('left','-1530px');
+                                    index = 5;
+                                }
+                                /*if(index>)*/
+                                $(".slider2").animate({
+                                    left: -index*255
+                                },500);
+                            }).on("mouseleave", function () {
+                                clearInterval(timer3);
+                                timer3 = setInterval(function () {
+                                    index++;
+                                    if(index > $(".slider2 li").length-4){
+                                        $('.slider2').css('left','-1020px');
+                                        index = 5;
+                                    }
+                                    $('.slider2').animate({
+                                        left:-index*255
+                                    },500);
+                                },2000);
+                            });
+                            $(".btn-right").on("click", function () {
+                                clearInterval(timer3);
+                                index++;
+                                if(Math.abs(index)>$(".slider2 li").length-4){
+                                    $(".slider2").css('left','-1020px');
+                                    index = 5;
+                                }
+                                $(".slider2").animate({
+                                    left: -index*255
+                                },500);
+                            }).on("mouseleave", function () {
+                                clearInterval(timer3);
+                                timer3 = setInterval(function () {
+                                    index++;
+                                    if(index > $(".slider2 li").length-4){
+                                        $('.slider2').css('left','-1020px');
+                                        index = 5;
+                                    }
+                                    $('.slider2').animate({
+                                        left:-index*255
+                                    },500);
+                                },2000);
+                            });
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!--右边侧边栏-->
+        <script>
+            $(function () {
+                $(".right-totop span").on("click", function () {
+                    $(this).hide().siblings().show();
+                });
+                $(".right-totop ul").mouseleave(function () {
+                    $(this).fadeOut();
+                    $(this).siblings().fadeIn(1000);
+                });
+                $("#return-top").click(function () {
+                    $("html,body").animate({
+                        scrollTop:0
+                    },500);
+                });
+            });
+        </script>
+        <div class="right-totop">
+            <span><</span>
+            <ul>
+                <li><a href="##">邮箱</a></li>
+                <li><a href="##">联系电话</a></li>
+                <li><a href="javascript:;" id="return-top">top</a></li>
+            </ul> 
+        </div>
+    </div>
+</body>
+</html>

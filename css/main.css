@@ -1,0 +1,408 @@
+/*联系我们start*/
+.contentUs {
+	width: 1120px;
+	background-color: #fff;
+	margin: 0 auto;
+	border-radius: 10px;
+	padding: 10px;
+}
+.usName {
+	width: 900px;
+	margin: 0 auto;
+}
+.usName h2 {
+	text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    color: #000;
+    padding-top: 20px;
+}
+.usName .line {
+	height: 3px;
+	width: 120px;
+	margin: 0 auto;
+	background-color: #000;
+	margin-bottom: 20px;
+}
+
+.usName p {
+	text-indent: 2em;
+    font-size: 14.5px;
+    color: #3e3c3c;
+    line-height: 26px;
+}
+.usAbout {
+	width: 1000px;
+	margin: 0 auto;
+}
+.usAbout ul {
+	height: 50px;
+	line-height: 50px;
+	margin: 30px 0 40px 0;
+}
+.usAbout ul li {
+	float: left;
+    width: 30%;
+    text-align: center;
+    margin-left: 2%;
+    background-color: #eee;
+    font-size: 16px;
+}
+.usAbout ul li img {
+    width: 25px;
+    margin-right: 23px;
+    position: relative;
+    bottom: 2px;
+}
+.usMap {
+	text-align: center;
+	margin: 20px auto;
+}
+.city_title {
+	border-bottom: 1px solid #C4D1F3;
+	margin-bottom: 10px;
+}
+.city_fac .city_title h3{
+	color: #000;
+    display: inline-block;
+    font-size: 21px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    border-bottom: 2px solid #1884E1;
+}
+.city_fac img {
+	width: 96%;
+	height: 100px; 
+}
+ /*联系我们end*/
+
+/*城市建设 start*/
+.cityBuild {
+	width: 1120px;
+	background-color: #fff;
+	margin: 0 auto;
+	border-radius: 10px;
+	padding: 10px;
+}
+.city_top{
+ 	padding: 15px;
+ }
+.city_top>div {
+	width: 48%;
+}
+.city_topL>div.city_title{
+	border-bottom: 1px solid #78b929;
+}
+.city_topL>div.city_title h3 {
+	color: #fff;
+    display: inline-block;
+    background-color: #78b929;
+    font-size: 20px;
+    padding: 0px 33px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.city_content {
+	background-color: #eee;
+	margin: 15px 20px 20px 0;
+	padding: 5px 15px;
+}
+.city_content h3 {
+	color: #000;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-left: 2px solid #78b929;
+    margin: 6px 0;
+    font-weight: bold;
+}
+.city_content p {
+	text-indent: 2em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    position: relative;
+    padding: 3px 31px 3px 20px;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.city_content p a {
+	position: absolute;
+    bottom: 0px;
+    right: 0;
+    color: red;
+}
+.city_downR {
+	padding-top: 41px;
+}
+/*城市建设 轮播图插件*/
+/*定义css变量*/
+:root{
+    --mywidth: 500px;
+    --myheight: 300px;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 29px;
+}
+.a-content{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius:10px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.a-content:before{
+    content: '';
+    width: 500px;
+    height: 300px;
+    left: 35px;
+    top: 19px;
+    z-index:-1;
+    position:absolute;
+    border-radius:10px;
+    border: 1px solid rgba(0,0,0, 0.1);
+    background: rgba(0, 0, 0, 0.0);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate(-35px,-20px);
+    -moz-transform: translate(-35px,-20px);
+    -ms-transform: translate(-35px,-20px);
+    -o-transform: translate(-35px,-20px);
+    transform: translate(-35px,-20px);
+}
+.a-content:after{
+    content: '';
+    position:absolute;
+    top:-25px;
+    left: 25%;
+    width: 270px;
+    height: 40px;
+    background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.carousel-content{
+    width: var(--mywidth);
+    height: var(--myheight);
+    position: relative;
+    overflow: hidden;
+    border-radius:10px;
+}
+.carousel{
+    height: var(--myheight);
+    position: absolute;
+}
+.carousel li{
+    float: left;
+}
+.carousel li,.carousel li img{
+    width: var(--mywidth);
+    height: var(--myheight);
+}
+.img-index{
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.img-index li{
+    float: left;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 3px;
+    color: #fff;
+}
+.img-index li.js_index,.img-index li:hover{
+    background-color: rgba(0,0,0,0.7);
+}
+.carousel-prev,.carousel-next{
+    position: absolute;
+    display: inline-block;
+    top: 45%;
+    cursor: pointer;
+    display: none;
+}
+.carousel-prev{
+    left: 0;
+}
+.carousel-next{
+    right: 0;
+}
+.carousel .bana_title{
+    position: absolute;
+    width: 500px;
+    background-color: rgba(90, 88, 88, 0.6);
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+.img-index {
+    justify-content: flex-end;
+}
+/*城市建设 轮播图插件 end*/
+/*城市建设 end*/
+/*办事指南 start*/
+.workGuide {
+    width: 1120px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+.top_content {
+    width: 47%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.work_title {
+    border-bottom: 1px solid #eee;
+}
+.work_title h3 {
+    color: #000;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-left: 8px solid #1985e1;
+    margin: 6px 0;
+    font-weight: bold;
+}
+.work_content a {
+    color: #000;
+}
+.work_content {
+    padding-top: 30px;
+}
+.work_content li a {
+    width: 41%;
+    float: left;
+    background-color: #F0F4F7;
+    height: 60px;
+    text-align: center;
+    margin: 10px 22px;
+    line-height: 60px;
+    font-size: 20px;
+}
+.work_content_right li {
+    margin: 20px;
+}
+.work_content_right li img {
+    width: 490px;
+    height: 112px;
+}
+.mid_content {
+    margin:0 20px;
+}
+.mid_content_download {
+    padding: 25px 15px;
+}
+.mid_content_download a {
+    color: #000;
+    width: 45%;
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.mid_content_download a span:first-child {
+    font-weight: bold;
+    margin-right: 5px;
+    position: relative;
+    bottom: 5px;
+}
+.mid_content_download a span.overhide {
+    width: 225px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    color: #242425;
+}
+.mid_content_download a span:last-child {
+    float: right;
+}
+.bottom_content {
+    margin: 0 20px;
+}
+.work_title_bottom {
+    border-bottom: 1px solid #eee;
+}
+.work_title_bottom h3 {
+    color: #fff;
+    font-size: 18px;
+    padding: 13px 30px 9px;
+    background-color: #1884E1;
+    display: inline-block;
+    font-weight: bold;
+}
+.bottom_content_img {
+    text-align: center;
+    padding: 20px;
+}
+.bottom_content_img img {
+    width: 90%;
+}
+.work_content img {
+    width: 30px;
+    height: auto;
+    margin-right: 20px; 
+}
+
+/*办事指南 end*/
+/*办事指南 电力接入 start*/
+.wgPower {
+    width: 1120px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+.wgPower_content {
+    margin: 60px;
+    padding: 60px;
+    border: 20px solid #F0F3F6;
+}
+.wgPower_content h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: #000;
+}
+.wgPower_content h3 {
+    color: #000;
+    font-size: 25px;
+    line-height: 25px;
+    margin: 35px 0;
+}
+.wgPower_content p {
+    color: #000;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 30px 0;
+    padding-left: 85px;
+}
+/*办事指南 电力接入 end*/

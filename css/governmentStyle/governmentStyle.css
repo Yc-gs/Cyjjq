@@ -1,0 +1,273 @@
+.center{
+  width: 94%;
+  height: 700px;
+  margin-left: 30px;
+  margin-top: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #fff;
+}
+.center_left_top{
+  float: left;
+  position: relative;
+  width: 550px;
+  margin-left: 40px;
+}
+.center_left_top img{
+  width: 100%;
+  height: 270px;
+  margin-top: 20px;
+}
+.center_detail{
+  position: absolute;
+  right: 15px;
+  top: 77%;
+  color: #fff;
+  font-size: 22px;
+}
+.center_left_top p {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f2f4f6;
+  color: #464645;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #dededf;
+  box-sizing:border-box;
+}
+.center_right_top{
+  float: left;
+  margin-left: 30px;
+}
+.top_text{
+  width: 470px;
+  height: 45px;
+  margin-top: 20px;
+  line-height: 45px;
+  text-indent: 10px;
+  font-size: 26px;
+  border-left: 8px solid #1985e1;
+}
+.top_text span{
+  margin-left: 262px;
+  color: #818283;
+  font-size: 23px;
+  cursor: pointer;
+}
+.center_right_detail{
+  margin-top: 5px;
+  width: 470px;
+  border-top: 1px solid #edeeee;
+}
+.center_right_detail img{
+  float: left;
+  width: 182px;
+  height: 240px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.center_right_detail p{
+  width: 240px;
+  margin-left: 240px;
+  line-height: 31px;
+  font-size: 19px;
+  color: #026ecd;
+}
+.center_right_detail p:nth-of-type(1){
+  margin-top: 40px;
+  font-size: 22px;
+  color: #040403;
+}
+.center_right_detail p:nth-of-type(4),
+.center_right_detail p:nth-of-type(5)
+  {
+  color: #323232;
+}
+.center_left_bottom{
+  float: left;
+  width: 550px;
+  margin-left: 40px;
+}
+.center_left_bottom .top_text{
+  width: 550px;
+  margin-top: 35px;
+  font-size: 20px;
+  border-left: none;
+  background-color: #ecf4f8;
+  border: 1px solid #dededf;
+  border-bottom: none;
+  box-sizing:border-box;
+}
+.center_left_bottom .top_text span{
+  margin-left: 370px;
+  font-size: 20px;
+}
+.center_left_bottom ul{
+  width: 100%;
+  padding-bottom: 20px;
+  color: #3b3b3c;
+  border: 1px solid #dededf;
+  border-top: none;
+  box-sizing:border-box;
+}
+.center_left_bottom li{
+  width: 100%;
+  height: 34px;
+  font-size: 20px;
+}
+.center_left_bottom li span{
+  width: 300px;
+  height: 30px;
+  line-height: 34px;
+  display: inline-block;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.center_left_bottom li a{
+  float: right;
+  margin-right: 30px;
+  line-height: 34px;
+  color: #7ab92c;
+}
+.center_left_bottom li a:hover{
+  opacity: .5;
+}
+.center_right_bottom{
+  float: left;
+  width: 470px;
+  margin-left: 30px;
+  background-color: #f2f4f6;
+  margin-top: 35px;
+}
+.center_content{
+  margin: 11px;
+  background-color: #fff;
+}
+.right_title{
+  height: 34px;
+  line-height: 35px;
+  text-indent: 43px;
+  font-size: 20px;
+  border-bottom: 1px solid #dededf;
+  background-image: url('../../images/governmentStyle3.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 54px 40px;
+  background-size: 35px 35px;
+}
+.center_content h1{
+  width: 300px;
+  margin: 15px 0 0 85px;
+  line-height: 32px;
+  font-size: 26px;
+  font-weight: 1000;
+  text-align: center;
+}
+.center_content p:nth-of-type(1){
+  margin-top: 15px;  
+}
+.center_content p{
+  padding: 0 20px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+.center_content p:nth-of-type(2){
+  padding-bottom: 10px;  
+}
+.center_content a{
+  margin:  10px 0 5px 300px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #7ab92c;
+}
+.center_content a:hover{
+  opacity: .5;
+}
+.big_title,.big_thing{
+  margin-left: 30px;
+  margin-right: 42px;
+  background-color: #fff;
+}
+.big_title{
+  padding-bottom: 30px;
+}
+.big_title p{
+  width: 1050px;
+  margin-left: 40px;
+  border-bottom: 4px solid #1985e1;
+}
+.big_title span{
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  font-size: 26px;
+  color: #fff;
+  text-align: center;
+  background-color: #1985e1;
+}
+.big_thing{
+  margin-bottom: 200px;
+}
+
+/***************************************
+  swiper轮播的css样式
+****************************************/
+.swiper-container{
+  width: 1050px;
+  height: 280px;
+}
+.swiper-button-prev{
+  background-image: url('../../images/governmentStyle_pre.png');
+  background-size: 38px 85px;
+}
+.swiper-button-next{
+  background-image: url('../../images/governmentStyle_next.png');
+  background-size: 38px 85px;
+}
+.swiper-button-next, .swiper-button-prev {
+  width: 38px;
+  height: 85px;
+}
+.swiper-pagination-bullet{
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 16px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0,0,0,0.2);
+}
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #0281b0;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 44px;
+  left: 0;
+  width: 68%;
+}
+.big_thing img{
+  float: left;
+  width: 580px;
+  height: 260px;
+  margin-left: 65px;
+}
+.slide_right h2{
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: bolder;
+  text-align: center;
+}
+.slide_right p{
+  margin: 0 60px 0 670px;
+  line-height: 24px;
+  font-size: 16px;
+}

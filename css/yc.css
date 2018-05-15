@@ -1,0 +1,417 @@
+/*头部滚动条插件*/
+*{ padding:0; margin:0; font-size:12px}
+ul,li{ list-style:none;}
+.box{
+    padding-left: 40px;;height:32px; background:url(../images/喇叭.png) no-repeat 22px 9px #fbfbfb; overflow:hidden;}
+.t_news{ height:19px;  color:#494e5f; padding-left:10px; margin:8px 0; overflow:hidden; position:relative;}
+.t_news b{ line-height:19px; font-weight:bold; display:inline-block;color: #5a93d1;}
+.news_li,.swap{ line-height:19px; display:inline-block; position:absolute; top:0; left:72px;width: 80%;}
+.news_li a,.swap a{ color:#494e5f;}
+.news_li span,.swap span {
+    float: right;
+}
+.swap{top:19px;}
+/*轮播图插件*/
+/*定义css变量*/
+:root{
+    --mywidth: 500px;
+    --myheight: 300px;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-content{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius:10px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.a-content:before{
+    content: '';
+    width: 500px;
+    height: 300px;
+    left: 35px;
+    top: 19px;
+    z-index:-1;
+    position:absolute;
+    border-radius:10px;
+    border: 1px solid rgba(0,0,0, 0.1);
+    background: rgba(0, 0, 0, 0.0);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate(-35px,-20px);
+    -moz-transform: translate(-35px,-20px);
+    -ms-transform: translate(-35px,-20px);
+    -o-transform: translate(-35px,-20px);
+    transform: translate(-35px,-20px);
+}
+.a-content:after{
+    content: '';
+    position:absolute;
+    top:-25px;
+    left: 25%;
+    width: 270px;
+    height: 40px;
+    background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.carousel-content{
+    width: var(--mywidth);
+    height: var(--myheight);
+    position: relative;
+    overflow: hidden;
+    border-radius:10px;
+}
+.carousel{
+    height: var(--myheight);
+    position: absolute;
+}
+.carousel li{
+    float: left;
+}
+.carousel li,.carousel li img{
+    width: var(--mywidth);
+    height: var(--myheight);
+}
+.img-index{
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.img-index li{
+    float: left;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 3px;
+    color: #fff;
+}
+.img-index li.js_index,.img-index li:hover{
+    background-color: rgba(0,0,0,0.7);
+}
+.carousel-prev,.carousel-next{
+    position: absolute;
+    display: inline-block;
+    top: 45%;
+    cursor: pointer;
+    display: none;
+}
+.carousel-prev{
+    left: 0;
+}
+.carousel-next{
+    right: 0;
+}
+/*新闻栏目*/
+.slider1 {
+    width: 100%;
+}
+.slider1 .left,.slider1 .right {
+    width: 50%;
+    height: 360px;
+
+}
+.slider1 .right .notice {
+    width: 540px;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 30px;
+    margin-left: 8px;
+}
+.slider1 .right .notice ul {
+    width: 100%;
+    height: 40px;
+    background: #f1f1f1;
+}
+.slider1 .right .notice ul li {
+    width: 50%;
+    height: 40px;
+    float: left;
+    font: 400 16px/40px "Microsoft YaHei";
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.slider1 .right .notice ul li i {
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background-color: #db0911;
+    bottom: 0;
+    left: 62px;
+    display: none;
+}
+.slider1 .right .notice ul li:first-child i {
+    display: block;
+}
+.slider1 .right .notice ul li ul {
+    height: 220px;
+    width: 520px;
+    position: absolute;
+    top: 40px;
+    padding: 20px 10px;
+    background: #fff;
+    overflow: hidden;
+    display: none;
+}
+.slider1 .right .notice ul li:first-child ul {
+    display: block;
+}
+.slider1 .right .notice ul li:first-child ul {
+    left: 0;
+}
+.slider1 .right .notice ul li:last-child ul {
+    left: -270px;
+}
+.slider1 .right .notice ul li ul li {
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    height: 16px;
+    font: 400 12px/16px "Microsoft YaHei";
+    margin: 4px 0;
+}
+.slider1 .right .notice ul li ul li a {
+    float: left;
+    color: #000;
+    padding-left: 20px;
+    background: url(images/point.png) no-repeat 10px 7px;
+}
+.slider1 .right .notice ul li ul li a:hover {
+    color: #c40000;
+}
+.slider1 .right .notice ul li ul li span {
+    float: right;
+    padding-right: 20px;
+    color: #999;
+}
+.carousel .bana_title{
+    position: absolute;
+    width: 500px;
+    background-color: rgba(90, 88, 88, 0.6);
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+.img-index {
+    justify-content: flex-end;
+}
+/*choose-for*/
+.choose-for {
+    width: 1100px;
+    margin: 30px auto;
+}
+.choose-for ul {
+    width: 150%;
+}
+.choose-for ul li {
+    float: left;
+    margin-left:20px;
+}
+.choose-for ul li a {
+    display: block;
+}
+.choose-for ul li:first-child a:hover {
+    -webkit-box-shadow: 0 0 10px 1px #7d8eff;
+    -moz-box-shadow: 0 0 10px 1px #7d8eff;
+    box-shadow: 0 0 10px 1px #7d8eff;
+}
+.choose-for ul li:nth-child(2) a:hover {
+    -webkit-box-shadow: 0 0 10px 1px #6c9ef3;
+    -moz-box-shadow: 0 0 10px 1px #6c9ef3;
+    box-shadow: 0 0 10px 1px #6c9ef3;
+}
+.choose-for ul li:nth-child(3) a:hover {
+    -webkit-box-shadow: 0 0 10px 1px #6c9ef3;
+    -moz-box-shadow: 0 0 10px 1px #6c9ef3;
+    box-shadow: 0 0 10px 1px #6c9ef3;
+}
+
+.choose-for ul li:last-child a:hover {
+    -webkit-box-shadow: 0 0 10px 1px #62bdea;
+    -moz-box-shadow: 0 0 10px 1px #62bdea;
+    box-shadow: 0 0 10px 1px #62bdea;
+}
+.choose-for ul li a img {
+    width: 260px;
+    height: 140px;
+}
+
+
+
+/*重点企业展示*/
+.show-inportant {
+    width: 1100px;
+    margin: 60px auto;
+}
+.show-inportant .top {
+    width: 100%;
+    height: 30px;
+}
+.show-inportant .top h3 {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font: 600 16px/30px "Microsoft YaHei";
+    background:url(../images/重点企业展示.png) no-repeat 26px 3px #78b929;
+    background-size: 22px 22px;
+    padding-left: 15px;
+    color: #fff;
+
+}
+.show-inportant .line {
+    width: 100%;
+    height: 2px;
+    background: #78b929;
+}
+.show-inportant .big-slide {
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+}
+.show-inportant .big-slide .left-right {
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -32px;
+}
+.show-inportant .big-slide .left-right span {
+    float: left;
+    width: 30px;
+    height: 65px;
+    background-color: #e9e8ea;
+    text-align: center;
+    color: #b8b7b7;
+    font: 700 40px/65px "宋体";
+    cursor: pointer;
+    border-radius: 15%;
+}
+.show-inportant .big-slide .left-right span:hover {
+    -webkit-box-shadow: 0 0 15px 1px #e9e8ea;
+    -moz-box-shadow: 0 0 15px 1px #e9e8ea;
+    box-shadow: 0 0 15px 1px #b8b7b7;
+}
+.show-inportant .big-slide .left-right span:last-child {
+    float: right;
+}
+.show-inportant .big-slide .slide-inner {
+    width: 1040px;
+    height: 165.5333px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.show-inportant .big-slide .slide-inner ul {
+    position: absolute;
+    left: -1020px;
+    top: 0;
+    width: 1000%;
+}
+.show-inportant .big-slide .slide-inner ul li {
+    float: left;
+    margin-right: 20px;
+}
+.show-inportant .big-slide .slide-inner ul li:first-child {
+    margin-left: 20px;
+}
+.show-inportant .big-slide .slide-inner ul li .dt {}
+.show-inportant .big-slide .slide-inner ul li .dt a {
+    display: block;
+}
+.show-inportant .big-slide .slide-inner ul li .dt a img {
+    display: block;
+    width: 235px;
+    height: 165.533px;
+}
+/*.show-inportant .big-slide .slide-inner ul li .dd {
+    background: #f2f2f2;
+    text-align: center;
+}
+.show-inportant .big-slide .slide-inner ul li .dd p {
+    padding: 4px 0;
+}
+.show-inportant .big-slide .slide-inner ul li .dd p:first-child {
+    color: #505052;
+    font: 400 16px/16px "Microsoft YaHei";
+}
+.show-inportant .big-slide .slide-inner ul li .dd p:last-child {
+    color: #a6a8a9;
+    font: 400 14px/16px "Microsoft YaHei";
+}*/
+/*侧边栏效果样式*/
+.right-totop {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    margin-top: -92px;
+}
+.right-totop span {
+    display: block;
+    background-color: rgba(136,138,139,0.4);
+    width: 21px;
+    height: 184px;
+    text-align: center;
+    font: 600 40px/184px "宋体";
+    color: #fff;
+    cursor: pointer;
+}
+.right-totop ul {
+    width: 90px;
+    height: 294px;
+    background-color: rgba(136,138,139,0.4);
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+.right-totop ul li {
+    width: 100%;
+    height: 98px;
+    cursor: pointer;
+}
+.right-totop ul li a {
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+}
+.right-totop ul li:nth-child(1) {
+    background: url(../images/email2.png) no-repeat 22px 14px;
+}
+.right-totop ul li:nth-child(2) {
+    background: url(../images/tell2.png) no-repeat 22px 14px;
+}
+.right-totop ul li:nth-child(3) {
+    background: url(../images/top2.png) no-repeat 22px 14px;
+}
+.right-totop ul li:hover {
+    background-color: rgba(140,178,105,0.4);
+}
+.right-totop ul li a {
+    display: block;
+    color: #fff;
+    padding-top: 50px;
+    text-align: center;
+    font: 500 20px/48px "Microsoft YaHei";
+}
